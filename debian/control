@@ -1,0 +1,12 @@
+Source: ros-rolling-moveit-py
+Section: misc
+Priority: optional
+Maintainer: Peter David Fagan <peterdavidfagan@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, ros-rolling-ament-cmake, ros-rolling-ament-cmake-pytest <!nocheck>, ros-rolling-geometry-msgs, ros-rolling-moveit-core, ros-rolling-moveit-ros-planning, ros-rolling-moveit-ros-planning-interface, ros-rolling-octomap-msgs, ros-rolling-pybind11-vendor, ros-rolling-rclcpp, ros-rolling-rclpy, ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-moveit-py
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-ament-index-python, ros-rolling-geometry-msgs, ros-rolling-moveit-core, ros-rolling-moveit-ros-planning, ros-rolling-moveit-ros-planning-interface, ros-rolling-octomap-msgs, ros-rolling-rclcpp, ros-rolling-rclpy, ros-rolling-ros-workspace
+Description: Python binding for MoveIt 2
