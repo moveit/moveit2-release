@@ -1,0 +1,12 @@
+Source: ros-rolling-moveit
+Section: misc
+Priority: optional
+Maintainer: Henning Kayser <henningkayser@picknik.ai>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-rolling-moveit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-moveit-core, ros-rolling-moveit-planners, ros-rolling-moveit-plugins, ros-rolling-moveit-ros, ros-rolling-moveit-setup-assistant, ros-rolling-ros-workspace
+Description: Meta package that contains all essential packages of MoveIt 2
