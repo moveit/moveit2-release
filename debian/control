@@ -1,0 +1,12 @@
+Source: ros-rolling-moveit-resources-prbt-moveit-config
+Section: misc
+Priority: optional
+Maintainer: Alexander Gutenkunst <a.gutenkunst@pilz.de>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-rolling-moveit-resources-prbt-moveit-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-joint-state-publisher, ros-rolling-moveit-resources-prbt-ikfast-manipulator-plugin, ros-rolling-moveit-resources-prbt-support, ros-rolling-moveit-ros-move-group, ros-rolling-robot-state-publisher, ros-rolling-rviz2, ros-rolling-xacro, ros-rolling-ros-workspace
+Description: MoveIt Resources for testing: Pilz PRBT 6 A project-internal configuration for testing in MoveIt.
