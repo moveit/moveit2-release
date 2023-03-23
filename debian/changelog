@@ -1,0 +1,77 @@
+ros-rolling-moveit-resources-prbt-support (2.7.1-1jammy) jammy; urgency=high
+
+
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Thu, 23 Mar 2023 00:00:00 -0000
+
+ros-rolling-moveit-resources-prbt-support (2.7.0-1jammy) jammy; urgency=high
+
+
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Sun, 29 Jan 2023 00:00:00 -0000
+
+ros-rolling-moveit-resources-prbt-support (2.6.0-1jammy) jammy; urgency=high
+
+  * Improve CMake usage (#1550 <https://github.com/ros-planning/moveit2/issues/1550>)
+  * Contributors: Sebastian Jahr
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Thu, 10 Nov 2022 00:00:00 -0000
+
+ros-rolling-moveit-resources-prbt-support (2.5.3-1jammy) jammy; urgency=high
+
+
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Thu, 28 Jul 2022 00:00:00 -0000
+
+ros-rolling-moveit-resources-prbt-support (2.5.2-1jammy) jammy; urgency=high
+
+  * Rename cartesian_limits.yaml (#1422 <https://github.com/ros-planning/moveit2/issues/1422>)
+    Co-authored-by: Tyler Weaver <mailto:maybe@tylerjw.dev>
+  * Contributors: AndyZe
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Mon, 18 Jul 2022 00:00:00 -0000
+
+ros-rolling-moveit-resources-prbt-support (2.5.1-1jammy) jammy; urgency=high
+
+
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Tue, 31 May 2022 00:00:00 -0000
+
+ros-rolling-moveit-resources-prbt-support (2.5.0-1jammy) jammy; urgency=high
+
+
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Thu, 26 May 2022 00:00:00 -0000
+
+ros-rolling-moveit-resources-prbt-support (2.4.0-1jammy) jammy; urgency=high
+
+
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Thu, 20 Jan 2022 00:00:00 -0000
+
+ros-rolling-moveit-resources-prbt-support (2.3.2-1jammy) jammy; urgency=high
+
+
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Wed, 29 Dec 2021 00:00:00 -0000
+
+ros-rolling-moveit-resources-prbt-support (2.3.1-1jammy) jammy; urgency=high
+
+  * Bump new packages to 2.3.0
+  * Add PRBT test dependencies for PILZ planner (#909 <https://github.com/ros-planning/moveit2/issues/909>)
+    * Adding PRBT config
+    * Port prbt packages to ROS 2
+    * Move PRBT into test_configs directory
+    * Fix pre-commit for pilz test_config
+    * Revert "Docker - Temporarily move moveit_resources under target workspace due to #885 <https://github.com/ros-planning/moveit2/issues/885> (#915 <https://github.com/ros-planning/moveit2/issues/915>)"
+    * Reset repos file entry for moveit_resources
+    * prbt_support: drop all test code
+    Co-authored-by: Christian Henkel <mailto:post@henkelchristian.de>
+    Co-authored-by: Michael Görner <mailto:me@v4hn.de>
+    Co-authored-by: Sebastian Jahr <mailto:sebastian.jahr@picknik.ai>
+  * Contributors: Henning Kayser, Tyler Weaver
+  * initial commit from upstream PilzDE/pilz_robots version 0.5.19 (2020-09-07)
+
+ -- Alexander Gutenkunst <a.gutenkunst@pilz.de>  Thu, 23 Dec 2021 00:00:00 -0000
+
+
