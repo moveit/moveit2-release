@@ -1,0 +1,12 @@
+Source: ros-rolling-moveit-ros-benchmarks
+Section: misc
+Priority: optional
+Maintainer: Henning Kayser <henningkayser@picknik.ai>
+Build-Depends: debhelper (>= 9.0.0), libboost-date-time-dev, libboost-dev, libboost-filesystem-dev, ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-moveit-common, ros-rolling-moveit-core, ros-rolling-moveit-ros-planning, ros-rolling-moveit-ros-warehouse, ros-rolling-pluginlib (>= 1.11.2), ros-rolling-rclcpp, ros-rolling-tf2-eigen, ros-rolling-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-rolling-moveit-ros-benchmarks
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-date-time1.74.0, libboost-filesystem1.74.0, ros-rolling-launch-param-builder, ros-rolling-moveit-common, ros-rolling-moveit-configs-utils, ros-rolling-moveit-ros-planning, ros-rolling-moveit-ros-warehouse, ros-rolling-pluginlib (>= 1.11.2), ros-rolling-rclcpp, ros-rolling-tf2-eigen, ros-rolling-ros-workspace
+Description: Enhanced tools for benchmarks in MoveIt
