@@ -1,0 +1,14 @@
+Source: ros-rolling-moveit-ros-planning
+Section: misc
+Priority: optional
+Maintainer: Henning Kayser <henningkayser@picknik.ai>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-rolling-ament-cmake, ros-rolling-ament-cmake-gmock <!nocheck>, ros-rolling-ament-cmake-gtest <!nocheck>, ros-rolling-ament-index-cpp, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-eigen3-cmake-module, ros-rolling-generate-parameter-library, ros-rolling-message-filters, ros-rolling-moveit-common, ros-rolling-moveit-core, ros-rolling-moveit-msgs, ros-rolling-moveit-resources-panda-moveit-config <!nocheck>, ros-rolling-moveit-ros-occupancy-map-monitor, ros-rolling-pluginlib (>= 1.11.2), ros-rolling-rclcpp, ros-rolling-rclcpp-action, ros-rolling-ros-testing <!nocheck>, ros-rolling-srdfdom, ros-rolling-tf2, ros-rolling-tf2-eigen, ros-rolling-tf2-geometry-msgs, ros-rolling-tf2-msgs, ros-rolling-tf2-ros, ros-rolling-urdf, ros-rolling-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-rolling-moveit-ros-planning
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-rolling-ament-index-cpp, ros-rolling-eigen3-cmake-module, ros-rolling-generate-parameter-library, ros-rolling-message-filters, ros-rolling-moveit-common, ros-rolling-moveit-core, ros-rolling-moveit-msgs, ros-rolling-moveit-ros-occupancy-map-monitor, ros-rolling-pluginlib (>= 1.11.2), ros-rolling-rclcpp, ros-rolling-rclcpp-action, ros-rolling-srdfdom, ros-rolling-tf2, ros-rolling-tf2-eigen, ros-rolling-tf2-geometry-msgs, ros-rolling-tf2-msgs, ros-rolling-tf2-ros, ros-rolling-urdf, ros-rolling-ros-workspace
+Conflicts: ros-rolling-moveit-ros-planning-interface (<< 2.1.5)
+Replaces: ros-rolling-moveit-ros-planning-interface (<< 2.1.5)
+Description: Planning components of MoveIt that use ROS
