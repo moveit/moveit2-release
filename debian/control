@@ -1,0 +1,12 @@
+Source: ros-rolling-moveit-simple-controller-manager
+Section: misc
+Priority: optional
+Maintainer: Michael Görner <me@v4hn.de>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-control-msgs, ros-rolling-moveit-common, ros-rolling-moveit-core, ros-rolling-pluginlib (>= 1.11.2), ros-rolling-rclcpp, ros-rolling-rclcpp-action, ros-rolling-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-rolling-moveit-simple-controller-manager
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-control-msgs, ros-rolling-moveit-common, ros-rolling-moveit-core, ros-rolling-pluginlib (>= 1.11.2), ros-rolling-rclcpp, ros-rolling-rclcpp-action, ros-rolling-ros-workspace
+Description: A generic, simple controller manager plugin for MoveIt.
