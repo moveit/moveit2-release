@@ -1,0 +1,348 @@
+ros-rolling-moveit-ros-control-interface (2.7.1-1jammy) jammy; urgency=high
+
+  * Add Warning Message for Out of Date Controller Information (#1983 <https://github.com/ros-planning/moveit2/issues/1983>)
+    Co-authored-by: Joseph Schornak <mailto:joe.schornak@gmail.com>
+    Co-authored-by: Joseph Schornak <mailto:joe.schornak@gmail.com>
+  * Update SwitchController API usage (#1996 <https://github.com/ros-planning/moveit2/issues/1996>)
+    Fixes deprecated and now removed message fields https://github.com/ros-controls/ros2_control/pull/948
+  * Contributors: Erik Holum, Henning Kayser
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Thu, 23 Mar 2023 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.7.0-1jammy) jammy; urgency=high
+
+  * Fix parameters for ros2_control namespaces (#1833 <https://github.com/ros-planning/moveit2/issues/1833>)
+    Co-authored-by: AndyZe <mailto:andyz@utexas.edu>
+    Co-authored-by: Henning Kayser <mailto:henningkayser@picknik.ai>
+  * Fix BSD license in package.xml (#1796 <https://github.com/ros-planning/moveit2/issues/1796>)
+    * fix BSD license in package.xml
+    * this must also be spdx compliant
+  * Contributors: Christian Henkel, Pablo Iñigo Blasco
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Sun, 29 Jan 2023 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.6.0-1jammy) jammy; urgency=high
+
+  * Rename MoveItControllerManager. Add deprecation warning (#1601 <https://github.com/ros-planning/moveit2/issues/1601>)
+    * Rename MoveItControllerManager->Ros2ControlManager. Add deprecation warning.
+    * Do not rename base class
+    * Still allow users to load plugins by the old names
+    Co-authored-by: Jafar <mailto:jafar.uruc@gmail.com>
+  * Merge PR #1553 <https://github.com/ros-planning/moveit2/issues/1553>: Improve cmake files
+  * Use standard exported targets: export_${PROJECT_NAME} -> ${PROJECT_NAME}Targets
+  * Improve CMake usage (#1550 <https://github.com/ros-planning/moveit2/issues/1550>)
+  * Support chained controllers (#1482 <https://github.com/ros-planning/moveit2/issues/1482>)
+    * fix controller list if chained controllers exist
+    * add comments and clean code
+    * added additional comments
+    * fix formatting
+    * fix white space
+    * add const reference and chhnage variable name
+    * simplify logic to only  work with one layer chain
+    * Don't return false when not finding optional parameter
+    * Update moveit_ros/perception/pointcloud_octomap_updater/src/pointcloud_octomap_updater.cpp
+    Co-authored-by: AndyZe <mailto:andyz@utexas.edu>
+    * add debug information
+    * print controller names
+    * print controllers with not known type
+    * load controller dependencies
+    * start chained controllers in switch
+    * reverse order of activate controllers
+    * prevent stoppping controller twice
+    * revert all debug changes
+    * add ROS error if a controller chains to more than one
+    * use loop to index chained connections
+    * update ros_control
+    * add empty controller allocator for admittance controller
+    * fix plugin xml
+    * Update moveit_plugins/moveit_ros_control_interface/src/controller_manager_plugin.cpp
+    Co-authored-by: AndyZe <mailto:andyz@utexas.edu>
+    * Update moveit_plugins/moveit_ros_control_interface/src/controller_manager_plugin.cpp
+    Co-authored-by: AndyZe <mailto:andyz@utexas.edu>
+    * Update moveit_plugins/moveit_ros_control_interface/src/controller_manager_plugin.cpp
+    Co-authored-by: AndyZe <mailto:andyz@utexas.edu>
+    * Update moveit_plugins/moveit_ros_control_interface/src/controller_manager_plugin.cpp
+    Co-authored-by: AndyZe <mailto:andyz@utexas.edu>
+    * fix map indexing
+    * add comment
+    * Update moveit_plugins/moveit_ros_control_interface/src/controller_manager_plugin.cpp
+    Co-authored-by: Tyler Weaver <mailto:squirrel428@protonmail.com>
+    * Typos
+    Co-authored-by: JafarAbdi <mailto:cafer.abdi@gmail.com>
+    Co-authored-by: Jafar <mailto:jafar.uruc@gmail.com>
+    Co-authored-by: AndyZe <mailto:andyz@utexas.edu>
+    Co-authored-by: Vatan Aksoy Tezer <mailto:vatan@picknik.ai>
+    Co-authored-by: Tyler Weaver <mailto:squirrel428@protonmail.com>
+    Co-authored-by: AndyZe <mailto:zelenak@picknik.ai>
+  * Contributors: AndyZe, Paul Gesel, Robert Haschke, Sebastian Jahr
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Thu, 10 Nov 2022 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.5.3-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Thu, 28 Jul 2022 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.5.2-1jammy) jammy; urgency=high
+
+  * Remove unnecessary rclcpp.hpp includes (#1333 <https://github.com/ros-planning/moveit2/issues/1333>)
+  * Contributors: Jafar
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Mon, 18 Jul 2022 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.5.1-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Tue, 31 May 2022 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.5.0-1jammy) jammy; urgency=high
+
+  * Enable cppcheck (#1224 <https://github.com/ros-planning/moveit2/issues/1224>)
+    Co-authored-by: jeoseo <mailto:jeongwooseo2012@gmail.com>
+  * Make moveit_common a 'depend' rather than 'build_depend' (#1226 <https://github.com/ros-planning/moveit2/issues/1226>)
+  * 1.1.9
+  * 1.1.8
+  * 1.1.7
+  * 1.1.6
+  * Contributors: Jafar, Robert Haschke, jeoseo
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Thu, 26 May 2022 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.4.0-1jammy) jammy; urgency=high
+
+  * moveit_build_options()
+    Declare common build options like CMAKE_CXX_STANDARD, CMAKE_BUILD_TYPE,
+    and compiler options (namely warning flags) once.
+    Each package depending on moveit_core can use these via moveit_build_options().
+  * Contributors: Robert Haschke
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Thu, 20 Jan 2022 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.3.2-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Wed, 29 Dec 2021 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.3.1-1jammy) jammy; urgency=high
+
+  * Fix installation of moveit_ros_control_interface header files (#789 <https://github.com/ros-planning/moveit2/issues/789>)
+  * Enforce package.xml format 3 Schema (#779 <https://github.com/ros-planning/moveit2/issues/779>)
+  * Update Maintainers of MoveIt package (#697 <https://github.com/ros-planning/moveit2/issues/697>)
+  * Update controller_manager_plugin to fix MoveIt-managed controller switching (#785 <https://github.com/ros-planning/moveit2/issues/785>)
+  * moveit_ros_control_interface: Small comment cleanup (#754 <https://github.com/ros-planning/moveit2/issues/754>)
+  * Contributors: AndyZe, Dave Coleman, Henning Kayser, Joseph Schornak, Robert Haschke
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Thu, 23 Dec 2021 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.3.0-1jammy) jammy; urgency=high
+
+  * moveit_ros_control_interface: Fix dangling reference (#710 <https://github.com/ros-planning/moveit2/issues/710>)
+  * Port moveit ros control interface to ROS2 (#545 <https://github.com/ros-planning/moveit2/issues/545>)
+    * Port moveit_ros_control_interface to ROS2
+    * Multiple fixes to trajectory_execution_manager
+  * Fix reversed check in switchControllers (#2726 <https://github.com/ros-planning/moveit2/issues/2726>)
+  * Contributors: Jafar Abdi, Nathan Brooks, Joe Schornak, Henning Kayser
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Fri, 08 Oct 2021 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (2.2.1-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Mon, 12 Jul 2021 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (1.1.1-1jammy) jammy; urgency=high
+
+  * [maint] Add comment to MOVEIT_CLASS_FORWARD (#2315 <https://github.com/ros-planning/moveit/issues/2315>)
+  * Contributors: Felix von Drigalski
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Tue, 13 Oct 2020 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (1.1.0-1jammy) jammy; urgency=high
+
+  * [feature] Optional cpp version setting (#2166 <https://github.com/ros-planning/moveit/issues/2166>)
+  * [feature] Remove support for Indigo's ros_control (#2128 <https://github.com/ros-planning/moveit/issues/2128>)
+  * [feature] Add support for pos_vel_controllers and pos_vel_acc_controllers (#1806 <https://github.com/ros-planning/moveit/issues/1806>)
+  * [fix] Various fixes for upcoming Noetic release (#2180 <https://github.com/ros-planning/moveit/issues/2180>)
+  * [fix] Fix compiler warnings (#1773 <https://github.com/ros-planning/moveit/issues/1773>)
+  * [maint] clang-tidy-fix modernize-loop-convert to entire code base (#1419 <https://github.com/ros-planning/moveit/issues/1419>)
+  * [maint] Switch from include guards to pragma once (#1615 <https://github.com/ros-planning/moveit/issues/1615>)
+  * [maint] Remove ! from MoveIt name (#1590 <https://github.com/ros-planning/moveit/issues/1590>)
+  * Contributors: Dave Coleman, Henning Kayser, Jonathan Binney, Robert Haschke, Sandro Magalhães, Sean Yen, Tyler Weaver, Yu, Yan
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Fri, 04 Sep 2020 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (1.0.6-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Wed, 19 Aug 2020 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (1.0.5-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Wed, 08 Jul 2020 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (1.0.4-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Sat, 30 May 2020 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (1.0.3-1jammy) jammy; urgency=high
+
+  * [maint]   Fix errors: catkin_lint 1.6.7 (#1987 <https://github.com/ros-planning/moveit/issues/1987>)
+  * [maint]   Windows build: Fix binary artifact install locations. (#1575 <https://github.com/ros-planning/moveit/issues/1575>)
+  * [maint]   Use CMAKE_CXX_STANDARD to enforce c++14 (#1607 <https://github.com/ros-planning/moveit/issues/1607>)
+  * [feature] Add support for pos_vel_controllers and pos_vel_acc_controllers (#1806 <https://github.com/ros-planning/moveit/issues/1806>)
+  * Contributors: Robert Haschke, Sandro Magalhães, Sean Yen
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Sun, 26 Apr 2020 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (1.0.2-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Fri, 28 Jun 2019 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (1.0.1-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Fri, 08 Mar 2019 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (1.0.0-1jammy) jammy; urgency=high
+
+  * [fix] catkin_lint issues (#1341 <https://github.com/ros-planning/moveit/issues/1341>)
+  * Contributors: Robert Haschke
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Sun, 24 Feb 2019 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.10.8-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Mon, 24 Dec 2018 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.10.7-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Thu, 13 Dec 2018 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.10.6-1jammy) jammy; urgency=high
+
+  * [maintenance] Code Cleanup (#1196 <https://github.com/ros-planning/moveit/issues/1196>)
+  * Contributors: Robert Haschke
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Sun, 09 Dec 2018 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.10.5-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Thu, 01 Nov 2018 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.10.4-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Mon, 29 Oct 2018 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.10.3-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Mon, 29 Oct 2018 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.10.2-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Wed, 24 Oct 2018 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.10.1-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Fri, 25 May 2018 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.9.11-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Mon, 25 Dec 2017 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.9.10-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Sat, 09 Dec 2017 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.9.9-1jammy) jammy; urgency=high
+
+  * [improve] add backward compatibility patch for indigo (#551 <https://github.com/ros-planning/moveit/issues/551>)
+  * Contributors: Michael Görner
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Sun, 06 Aug 2017 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.9.8-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Wed, 21 Jun 2017 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.9.7-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Mon, 05 Jun 2017 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.9.6-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Wed, 12 Apr 2017 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.9.5-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Wed, 08 Mar 2017 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.9.4-1jammy) jammy; urgency=high
+
+  * [maintenance] clang-format upgraded to 3.8 (#367 <https://github.com/ros-planning/moveit/issues/367>)
+  * Contributors: Dave Coleman, Michael Goerner
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Mon, 06 Feb 2017 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.9.3-1jammy) jammy; urgency=high
+
+
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Wed, 16 Nov 2016 00:00:00 -0000
+
+ros-rolling-moveit-ros-control-interface (0.5.7-1jammy) jammy; urgency=high
+
+  * C++03 conforming nested templates
+  * fixed typo, added example config
+  * added brief decription tags
+  * formatted code to roscpp style
+  * improved documentation
+  * introduced getAbsName
+  * Added missing lock
+  * pre-allocate handles
+  * fixed typos
+  * set version to match the others
+  * fixed a lot of typos
+  * Intitial version of moveit_ros_control_interface package
+  * Contributors: Mathias Luedtke
+
+ -- Henning Kayser <henningkayser@picknik.ai>  Sat, 30 Jan 2016 00:00:00 -0000
+
+
