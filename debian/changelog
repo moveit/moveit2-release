@@ -1,0 +1,167 @@
+ros-rolling-moveit-setup-controllers (2.7.1-1bullseye) bullseye; urgency=high
+
+  * add missing dependencies on config utils (#1962 <https://github.com/ros-planning/moveit2/issues/1962>)
+    when installing ros-humble-moveit-setup-assistant from debs,
+    the package cannot currently run due to this missing depend
+  * Contributors: Michael Ferguson
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Thu, 23 Mar 2023 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.7.0-1bullseye) bullseye; urgency=high
+
+  * Merge PR #1712 <https://github.com/ros-planning/moveit2/issues/1712>: fix clang compiler warnings + stricter CI
+  * Add default constructors
+    ... as they are not implicitly declared anymore
+  * Add default copy/move constructors/assignment operators
+    As a user-declared destructor deletes any implicitly-defined move constructor/assignment operator,
+    we need to declared them manually. This in turn requires to declare the copy constructor/assignment as well.
+  * Fix -Wdelete-non-abstract-non-virtual-dtor
+  * Fix BSD license in package.xml (#1796 <https://github.com/ros-planning/moveit2/issues/1796>)
+    * fix BSD license in package.xml
+    * this must also be spdx compliant
+  * Minimize use of this-> (#1784 <https://github.com/ros-planning/moveit2/issues/1784>)
+    It's often unnecessary. MoveIt already avoids this in most cases
+    so this PR better cements that existing pattern.
+  * Add braces around blocks. (#999 <https://github.com/ros-planning/moveit2/issues/999>)
+  * Fix clang-tidy issues (#1706 <https://github.com/ros-planning/moveit2/issues/1706>)
+    * Blindly apply automatic clang-tidy fixes
+    * Exemplarily cleanup a few automatic clang-tidy fixes
+    * Clang-tidy fixups
+    * Missed const-ref fixups
+    * Fix unsupported non-const -> const
+    * More fixes
+    Co-authored-by: Henning Kayser <mailto:henningkayser@picknik.ai>
+  * Contributors: Chris Thrasher, Christian Henkel, Cory Crean, Robert Haschke
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Sun, 29 Jan 2023 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.6.0-1bullseye) bullseye; urgency=high
+
+  * Merge PR #1553 <https://github.com/ros-planning/moveit2/issues/1553>: Improve cmake files
+  * Cleanup cmake files
+    - Replace ament_export_libraries() -> ament_export_targets(HAS_LIBRARY_TARGET)
+    - Replace ament_export_include_directories() -> INCLUDES DESTINATION include
+    See https://docs.ros.org/en/foxy/How-To-Guides/Ament-CMake-Documentation.html#building-a-library
+  * Use standard exported targets: export_${PROJECT_NAME} -> ${PROJECT_NAME}Targets
+  * Improve CMake usage (#1550 <https://github.com/ros-planning/moveit2/issues/1550>)
+  * MSA: write the default controller namespace (#1515 <https://github.com/ros-planning/moveit2/issues/1515>)
+    * Write the default controller namespace
+    * Check for a sane controller type
+    * Revert the check for FollowJointTrajectory type
+  * Contributors: AndyZe, Robert Haschke, Sebastian Jahr
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Thu, 10 Nov 2022 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.5.3-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Thu, 28 Jul 2022 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.5.2-1bullseye) bullseye; urgency=high
+
+  * Rename cartesian_limits.yaml (#1422 <https://github.com/ros-planning/moveit2/issues/1422>)
+    Co-authored-by: Tyler Weaver <mailto:maybe@tylerjw.dev>
+  * [MSA] Testing Framework for MoveItSetupAssistant (#1383 <https://github.com/ros-planning/moveit2/issues/1383>)
+    Adds a nice testing harness for easy checking of generated files.
+    New Features:
+    * Updated sensor configuration format
+    * Keep trajectory execution parameters around
+    Tests
+    * Ported the ROS 1 tests for perception and controllers
+    * Added some SRDF Planning Groups tests
+  * fix duplicated ros_control joints (#1406 <https://github.com/ros-planning/moveit2/issues/1406>)
+    when more than one controller can control a joint,
+    that joint would appear multiple times
+  * [MSA] Add additional parameters to Controller definitions (#1408 <https://github.com/ros-planning/moveit2/issues/1408>)
+  * Merge pull request #1254 <https://github.com/ros-planning/moveit2/issues/1254> from ros-planning/feature/msa
+    MoveIt Setup Assistant - Merge the Feature branch
+  * [MSA] Clean up extra parentheses (#1366 <https://github.com/ros-planning/moveit2/issues/1366>)
+  * [MSA] ros2_control Integration (#1299 <https://github.com/ros-planning/moveit2/issues/1299>)
+  * [MSA] Workaround to launch files without controllers (#1275 <https://github.com/ros-planning/moveit2/issues/1275>)
+  * [MSA] PR Feedback
+  * [MSA] Migration Cleanup (#1253 <https://github.com/ros-planning/moveit2/issues/1253>)
+  * [MSA] Initial Controllers and Simulation Steps Port (#1252 <https://github.com/ros-planning/moveit2/issues/1252>)
+  * Contributors: AndyZe, David V. Lu!!, Michael Ferguson, Vatan Aksoy Tezer
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Mon, 18 Jul 2022 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.5.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Tue, 31 May 2022 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.5.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Thu, 26 May 2022 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.3.2-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Wed, 29 Dec 2021 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.3.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Thu, 23 Dec 2021 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.3.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Fri, 08 Oct 2021 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.2.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Mon, 12 Jul 2021 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.2.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Wed, 30 Jun 2021 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.1.4-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Mon, 31 May 2021 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.1.3-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Sat, 22 May 2021 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.1.2-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Thu, 22 Apr 2021 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.1.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Tue, 13 Apr 2021 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.1.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Tue, 24 Nov 2020 00:00:00 -0000
+
+ros-rolling-moveit-setup-controllers (2.0.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- David V. Lu!! <davidvlu@gmail.com>  Wed, 13 May 2020 00:00:00 -0000
+
+
