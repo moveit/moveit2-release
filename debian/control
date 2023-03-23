@@ -1,0 +1,12 @@
+Source: ros-rolling-moveit-planners-ompl
+Section: misc
+Priority: optional
+Maintainer: Henning Kayser <henningkayser@picknik.ai>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev <!nocheck>, libomp-dev, ros-rolling-ament-cmake, ros-rolling-ament-cmake-gtest <!nocheck>, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-eigen3-cmake-module, ros-rolling-moveit-common, ros-rolling-moveit-core, ros-rolling-moveit-msgs, ros-rolling-moveit-resources-fanuc-moveit-config <!nocheck>, ros-rolling-moveit-resources-panda-moveit-config <!nocheck>, ros-rolling-moveit-resources-pr2-description <!nocheck>, ros-rolling-moveit-ros-planning, ros-rolling-ompl, ros-rolling-pluginlib (>= 1.11.2), ros-rolling-rclcpp, ros-rolling-tf2-eigen, ros-rolling-tf2-eigen <!nocheck>, ros-rolling-tf2-ros, ros-rolling-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-rolling-moveit-planners-ompl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libomp-dev, ros-rolling-moveit-common, ros-rolling-moveit-core, ros-rolling-moveit-msgs, ros-rolling-moveit-ros-planning, ros-rolling-ompl, ros-rolling-pluginlib (>= 1.11.2), ros-rolling-rclcpp, ros-rolling-tf2-eigen, ros-rolling-tf2-ros, ros-rolling-ros-workspace
+Description: MoveIt interface to OMPL
