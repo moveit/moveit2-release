@@ -1,0 +1,12 @@
+Source: ros-rolling-chomp-motion-planner
+Section: misc
+Priority: optional
+Maintainer: Chittaranjan Srinivas Swaminathan <chitt@live.in>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-moveit-common, ros-rolling-moveit-core, ros-rolling-rclcpp, ros-rolling-rsl, ros-rolling-trajectory-msgs, ros-rolling-ros-workspace
+Homepage: http://ros.org/wiki/chomp_motion_planner
+Standards-Version: 3.9.2
+
+Package: ros-rolling-chomp-motion-planner
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-moveit-common, ros-rolling-moveit-core, ros-rolling-rclcpp, ros-rolling-rsl, ros-rolling-trajectory-msgs, ros-rolling-ros-workspace
+Description: chomp_motion_planner
