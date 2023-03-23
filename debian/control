@@ -1,0 +1,12 @@
+Source: ros-rolling-moveit-common
+Section: misc
+Priority: optional
+Maintainer: Henning Kayser <henningkayser@picknik.ai>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-backward-ros, ros-rolling-ros-workspace
+Homepage: http://moveit.ros.org
+Standards-Version: 3.9.2
+
+Package: ros-rolling-moveit-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-backward-ros, ros-rolling-ros-workspace
+Description: Common support functionality used throughout MoveIt
